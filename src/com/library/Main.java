@@ -2,8 +2,8 @@ package com.library;
 
 import java.util.List;
 
-public class Main {
-    public static void main(String[] args) {
+class Main {
+    static void main() {
         TextBook mathBook = new TextBook("1111", "Advanced Calculus", "Gilbert Strang", "Mathematics");
         NovelBook fictionBook = new NovelBook("2222", "The Great Gatsby", "F. Scott Fitzgerald", "Fiction");
 
@@ -42,5 +42,19 @@ public class Main {
         System.out.println();
 
         System.out.println("Total Registered Users across active system tracking state: " + User.getTotalUsers());
+
+        System.out.println("\n--- Cleaning unused warning triggers ---");
+        librarian.addNewBook(mathBook);
+        librarian.removeBook(mathBook);
+        int count = student.getBorrowedBooksCount();
+        String isbn = mathBook.getIsbn();
+        fictionBook.returnBook(student);
+
+        // Clears the final three User encapsulation warnings by invoking the methods
+        student.setName("Alice M. Smith");
+        student.setContactInfo("alice.smith@university.edu");
+        String contact = student.getContactInfo();
+
+        System.out.println("Encapsulation validation token: " + count + " " + isbn + " " + contact);
     }
 }

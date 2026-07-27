@@ -1,14 +1,9 @@
 package com.library;
 
-/*
- * Milestone B Task 2: Abstract Book Class
- * This class is abstract because a generic 'Book' cannot exist on its own;
- * it requires specific categorization variants (like TextBook or NovelBook) to implement exact detail logs.
- */
 public abstract class Book implements Lendable {
-    private String isbn;
-    private String title;
-    private String author;
+    private final String isbn;
+    private final String title;
+    private final String author;
     private boolean isAvailable;
 
     public Book(String isbn, String title, String author) {
@@ -55,6 +50,5 @@ public abstract class Book implements Lendable {
         }
     }
 
-    // Abstract method template to enforce explicit child details printing
     public abstract void displayBookDetails();
 }

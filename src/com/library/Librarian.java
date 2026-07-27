@@ -1,7 +1,7 @@
 package com.library;
 
 public class Librarian extends User {
-    private String employeeNumber;
+    private final String employeeNumber;
 
     public Librarian() {
         super();

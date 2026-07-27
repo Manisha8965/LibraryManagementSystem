@@ -1,10 +1,7 @@
 package com.library;
 
-/*
- * NovelBook is a concrete subclass that inherits all data fields and tracking rules from the parent Book class.
- */
 public class NovelBook extends Book {
-    private String genre;
+    private final String genre;
 
     public NovelBook(String isbn, String title, String author, String genre) {
         super(isbn, title, author);

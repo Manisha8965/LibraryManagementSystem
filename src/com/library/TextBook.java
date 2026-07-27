@@ -1,10 +1,7 @@
 package com.library;
 
-/*
- * TextBook is a concrete subclass that inherits all data fields and tracking rules from the parent Book class.
- */
 public class TextBook extends Book {
-    private String subject;
+    private final String subject;
 
     public TextBook(String isbn, String title, String author, String subject) {
         super(isbn, title, author);
