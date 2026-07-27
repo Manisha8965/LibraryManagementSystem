@@ -24,7 +24,7 @@ public abstract class User {
         this.contactInfo = otherUser.contactInfo;
     }
 
-    private static synchronized String generateUniqueId() {
+    public final String generateUniqueId() {
         totalUsers++;
         return "USR-" + String.format("%04d", totalUsers);
     }

@@ -2,7 +2,7 @@ package com.library;
 
 public class Member extends User {
     private int borrowedBooksCount;
-    private final int MAX_BORROW_LIMIT = 5;
+    private static final int MAX_BORROW_LIMIT = 5;
 
     public Member() {
         super();
@@ -17,6 +17,20 @@ public class Member extends User {
     public Member(Member otherMember) {
         super(otherMember);
         this.borrowedBooksCount = otherMember.borrowedBooksCount;
+    }
+
+    public int getBorrowedBooksCount() {
+        return borrowedBooksCount;
+    }
+
+    public void incrementBorrowedCount() {
+        borrowedBooksCount++;
+    }
+
+    public void decrementBorrowedCount() {
+        if (borrowedBooksCount > 0) {
+            borrowedBooksCount--;
+        }
     }
 
     @Override

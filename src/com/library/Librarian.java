@@ -1,7 +1,7 @@
 package com.library;
 
 public class Librarian extends User {
-    private String employeeNumber;
+    private final String employeeNumber;
 
     public Librarian() {
         super();
@@ -30,5 +30,13 @@ public class Librarian extends User {
     @Override
     public boolean canBorrowBooks() {
         return true;
+    }
+
+    public void addNewBook(Book book) {
+        LibraryManagementSystem.addBook(book);
+    }
+
+    public void removeBook(Book book) {
+        LibraryManagementSystem.removeBook(book);
     }
 }
