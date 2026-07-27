@@ -31,4 +31,12 @@ public class Librarian extends User {
     public boolean canBorrowBooks() {
         return true;
     }
+
+    public void addNewBook(Book book) {
+        LibraryManagementSystem.addBook(book);
+    }
+
+    public void removeBook(Book book) {
+        LibraryManagementSystem.removeBook(book);
+    }
 }
